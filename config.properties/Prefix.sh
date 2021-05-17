@@ -22,6 +22,6 @@ for ((i=0; i<$count; i++)); do
       replaceValue="$originalKey=$property"
       echo "$searchValue $replaceValue"
       sed -i -e "s/^$searchValue/$replaceValue/" $output
-      
+      sed -i -e 's/+/ /' $output
    fi
 done
